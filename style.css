@@ -1,0 +1,137 @@
+/* 1. Global Reset & Theme */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000; /* 纯黑背景 */
+    color: #ffffff;           /* 纯白文字 */
+    font-family: 'Inter', Arial, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;       
+}
+
+/* 2. Flexbox Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #000000;
+    border-bottom: 1px solid #333;
+    width: 100%;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.7;
+}
+
+/* 3. Layout Container */
+.container {
+    padding: 60px 5%;
+    max-width: 1400px; 
+    margin: 0 auto;
+}
+
+.hero-text {
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+/* 4. 大图展示核心样式 (index.html) */
+.hero-image-container {
+    width: 100%;
+    margin-top: 20px;
+    border: 1px solid #333;
+}
+
+.max-hero-image {
+    width: 100%;      
+    height: auto;     
+    display: block;   
+    object-fit: cover;
+}
+
+/* 5. Works Grid & iframe 适配 (work.html) */
+.work-grid {
+    display: grid;
+    /* 调整为最小 400px 以便更清晰地看到 p5 画布 */
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.work-item {
+    border: 1px solid #333; /* 暗色边框，悬停时变白 */
+    background: #111111;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.work-item:hover {
+    border-color: #ffffff; /* 悬停时边框高亮 */
+}
+
+/* 核心：iframe 容器 */
+.canvas-container {
+    width: 100%;
+    height: 400px; /* 统一设置预览窗口高度 */
+    background: #000;
+    border-bottom: 1px solid #333;
+    overflow: hidden;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+.work-info {
+    padding: 20px;
+    text-align: left; /* 改为左对齐，更符合文档感 */
+}
+
+.work-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+.work-info p {
+    font-size: 0.9rem;
+    color: #bbb;
+}
+
+/* 6. About Section */
+.section-margin { margin-bottom: 50px; }
+h2 { font-size: 1.8rem; border-bottom: 1px solid #333; padding-bottom: 10px; margin: 20px 0; }
+ul { list-style: square; margin-left: 20px; }
